@@ -307,60 +307,168 @@
                 <p class="section-desc">From your wrist to your home screen, InviSmile keeps your treatment visible and accessible.</p>
             </div>
 
-            <div class="ecosystem-grid" data-animate="fade-up">
-                <div class="eco-card eco-watch">
-                    <div class="eco-visual">
-                        <div class="watch-frame">
-                            <div class="watch-screen">
-                                <div class="watch-time">10:09</div>
-                                <div class="watch-rings-mini">
-                                    <div class="wr wr-outer"></div>
-                                    <div class="wr wr-mid"></div>
-                                    <div class="wr wr-inner"></div>
-                                </div>
-                                <div class="watch-status">21.2h worn</div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Apple Watch -->
+            <div class="eco-section" data-animate="fade-up">
+                <div class="eco-text">
                     <h3>Apple Watch</h3>
-                    <p>Full companion app with complications. Glance at your progress, start sessions from your wrist.</p>
+                    <p>Full companion app with complications. Track sessions, view progress, and manage your aligners — all from your wrist.</p>
                 </div>
-
-                <div class="eco-card eco-widgets">
-                    <div class="eco-visual">
-                        <div class="widget-stack">
-                            <div class="widget widget-sm">
-                                <div class="widget-ring-small"></div>
-                                <span>92%</span>
+                <div class="eco-devices">
+                    <div class="watch-device">
+                        <div class="watch-body">
+                            <div class="watch-screen-content watch-canvas">
+                                <div class="ws-badge-in">IN</div>
+                                <div class="ws-ring">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle cx="50" cy="50" r="38" fill="none" stroke="#E8E0D4" stroke-width="8"/>
+                                        <circle cx="50" cy="50" r="38" fill="none" stroke="#D1A67A" stroke-width="8" stroke-linecap="round"
+                                            stroke-dasharray="239" stroke-dashoffset="24" transform="rotate(-90 50 50)"/>
+                                    </svg>
+                                    <div class="ws-ring-text">
+                                        <span class="ws-time">19h 53m</span>
+                                        <span class="ws-sub">worn today</span>
+                                    </div>
+                                </div>
+                                <div class="ws-remove-btn">Remove</div>
+                                <div class="ws-tray">Tray 1</div>
                             </div>
-                            <div class="widget widget-md">
-                                <div class="widget-content">
-                                    <span class="widget-title">Tray 8 of 22</span>
-                                    <div class="widget-bar"><div class="widget-bar-fill"></div></div>
-                                    <span class="widget-sub">14 day streak</span>
+                        </div>
+                    </div>
+                    <div class="watch-device">
+                        <div class="watch-body">
+                            <div class="watch-screen-content watch-canvas">
+                                <div class="ws-summary-title">Today's Summary</div>
+                                <div class="ws-summary-card">
+                                    <span class="ws-card-label">Worn Time</span>
+                                    <div class="ws-card-row">
+                                        <span class="ws-card-icon green">&#10003;</span>
+                                        <span class="ws-card-val">19h 53m</span>
+                                    </div>
+                                    <span class="ws-card-sub">of 22h goal</span>
+                                </div>
+                                <div class="ws-summary-card">
+                                    <span class="ws-card-label">Removed Time</span>
+                                    <div class="ws-card-row">
+                                        <span class="ws-card-icon orange">&#8212;</span>
+                                        <span class="ws-card-val">0h</span>
+                                    </div>
+                                    <span class="ws-card-sub">0 sessions</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Widgets -->
+            <div class="eco-section reverse" data-animate="fade-up">
+                <div class="eco-text">
                     <h3>Home Screen Widgets</h3>
-                    <p>Small, medium, and large widgets that show your progress at a glance without opening the app.</p>
+                    <p>Small, medium, and large widgets keep your treatment front and center. See wear time, tray progress, and streaks without opening the app.</p>
                 </div>
-
-                <div class="eco-card eco-live">
-                    <div class="eco-visual">
-                        <div class="live-activity">
-                            <div class="la-left">
-                                <div class="la-icon"></div>
-                                <div class="la-text">
-                                    <span class="la-title">Aligners Out</span>
-                                    <span class="la-sub">Eating</span>
+                <div class="eco-devices">
+                    <div class="widgets-showcase">
+                        <!-- Small widget -->
+                        <div class="hw hw-small">
+                            <div class="hw-ring-wrap">
+                                <svg viewBox="0 0 48 48">
+                                    <circle cx="24" cy="24" r="20" fill="none" stroke="rgba(209,166,122,0.2)" stroke-width="5"/>
+                                    <circle cx="24" cy="24" r="20" fill="none" stroke="#D1A67A" stroke-width="5" stroke-linecap="round"
+                                        stroke-dasharray="126" stroke-dashoffset="10" transform="rotate(-90 24 24)"/>
+                                </svg>
+                                <span class="hw-pct">92%</span>
+                            </div>
+                        </div>
+                        <!-- Medium widget -->
+                        <div class="hw hw-medium">
+                            <div class="hw-med-left">
+                                <svg viewBox="0 0 56 56" class="hw-med-ring">
+                                    <circle cx="28" cy="28" r="22" fill="none" stroke="rgba(209,166,122,0.2)" stroke-width="5"/>
+                                    <circle cx="28" cy="28" r="22" fill="none" stroke="#E3D9C6" stroke-width="5" stroke-linecap="round"
+                                        stroke-dasharray="138" stroke-dashoffset="11" transform="rotate(-90 28 28)"/>
+                                    <circle cx="28" cy="28" r="16" fill="none" stroke="rgba(209,166,122,0.2)" stroke-width="5"/>
+                                    <circle cx="28" cy="28" r="16" fill="none" stroke="#D1A67A" stroke-width="5" stroke-linecap="round"
+                                        stroke-dasharray="101" stroke-dashoffset="30" transform="rotate(-90 28 28)"/>
+                                </svg>
+                            </div>
+                            <div class="hw-med-right">
+                                <span class="hw-med-title">InviSmile</span>
+                                <span class="hw-med-val">21h 14m</span>
+                                <span class="hw-med-sub">Tray 8 - Day 12</span>
+                                <div class="hw-med-bar"><div class="hw-med-fill"></div></div>
+                            </div>
+                        </div>
+                        <!-- Large widget -->
+                        <div class="hw hw-large">
+                            <div class="hw-lg-header">
+                                <span class="hw-lg-title">InviSmile</span>
+                                <span class="hw-lg-status">On Track</span>
+                            </div>
+                            <div class="hw-lg-body">
+                                <div class="hw-lg-ring-wrap">
+                                    <svg viewBox="0 0 80 80">
+                                        <circle cx="40" cy="40" r="32" fill="none" stroke="rgba(209,166,122,0.15)" stroke-width="7"/>
+                                        <circle cx="40" cy="40" r="32" fill="none" stroke="#E3D9C6" stroke-width="7" stroke-linecap="round"
+                                            stroke-dasharray="201" stroke-dashoffset="16" transform="rotate(-90 40 40)"/>
+                                        <circle cx="40" cy="40" r="23" fill="none" stroke="rgba(209,166,122,0.15)" stroke-width="7"/>
+                                        <circle cx="40" cy="40" r="23" fill="none" stroke="#D1A67A" stroke-width="7" stroke-linecap="round"
+                                            stroke-dasharray="145" stroke-dashoffset="36" transform="rotate(-90 40 40)"/>
+                                        <circle cx="40" cy="40" r="14" fill="none" stroke="rgba(209,166,122,0.15)" stroke-width="7"/>
+                                        <circle cx="40" cy="40" r="14" fill="none" stroke="#B3664C" stroke-width="7" stroke-linecap="round"
+                                            stroke-dasharray="88" stroke-dashoffset="35" transform="rotate(-90 40 40)"/>
+                                    </svg>
+                                </div>
+                                <div class="hw-lg-stats">
+                                    <div class="hw-lg-stat"><span class="hw-lg-sval">21h 14m</span><span class="hw-lg-slbl">Wear</span></div>
+                                    <div class="hw-lg-stat"><span class="hw-lg-sval">14 days</span><span class="hw-lg-slbl">Streak</span></div>
+                                    <div class="hw-lg-stat"><span class="hw-lg-sval">Tray 8</span><span class="hw-lg-slbl">Current</span></div>
                                 </div>
                             </div>
-                            <div class="la-timer">04:23</div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Live Activities -->
+            <div class="eco-section" data-animate="fade-up">
+                <div class="eco-text">
                     <h3>Live Activities</h3>
-                    <p>See your active timer right on the lock screen and Dynamic Island. Never lose track.</p>
+                    <p>Your active timer appears on the lock screen and Dynamic Island. Always visible, never forgotten. Tap to jump right back into the app.</p>
+                </div>
+                <div class="eco-devices">
+                    <div class="la-showcase">
+                        <!-- Dynamic Island -->
+                        <div class="di-pill">
+                            <div class="di-left">
+                                <div class="di-icon-ring">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#D1A67A" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="57" stroke-dashoffset="14" transform="rotate(-90 12 12)"/></svg>
+                                </div>
+                            </div>
+                            <div class="di-right">
+                                <span class="di-timer">24:37</span>
+                            </div>
+                        </div>
+                        <!-- Lock Screen -->
+                        <div class="la-lockscreen">
+                            <div class="la-ls-inner">
+                                <div class="la-ls-left">
+                                    <div class="la-ls-icon">
+                                        <svg viewBox="0 0 20 20" width="20" height="20"><circle cx="10" cy="10" r="7" fill="none" stroke="#F28F21" stroke-width="2"/><path d="M10 6V10L12.5 11.5" stroke="#F28F21" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                    </div>
+                                    <div class="la-ls-text">
+                                        <span class="la-ls-title">Aligners Out</span>
+                                        <span class="la-ls-sub">Eating & Drinking</span>
+                                    </div>
+                                </div>
+                                <div class="la-ls-right">
+                                    <div class="la-ls-ring">
+                                        <svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="18" fill="none" stroke="rgba(242,143,33,0.2)" stroke-width="4"/><circle cx="22" cy="22" r="18" fill="none" stroke="#F28F21" stroke-width="4" stroke-linecap="round" stroke-dasharray="113" stroke-dashoffset="28" transform="rotate(-90 22 22)"/></svg>
+                                        <span class="la-ls-timer">24:37</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

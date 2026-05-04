@@ -318,20 +318,38 @@
                         <div class="watch-band-top"></div>
                         <div class="watch-body">
                             <div class="watch-screen-content watch-canvas">
-                                <div class="ws-badge-in">IN</div>
-                                <div class="ws-ring">
+                                <div class="ws-top-row">
+                                    <div class="ws-app-icon">
+                                        <svg viewBox="0 0 24 24" width="16" height="16">
+                                            <path d="M12 2C9.5 2 7.5 4.5 7.5 7.5C7.5 9.5 8.5 11.2 10 12.2C8.3 13 7 14.8 7 17C7 19.8 9.2 22 12 22C14.8 22 17 19.8 17 17C17 14.8 15.7 13 14 12.2C15.5 11.2 16.5 9.5 16.5 7.5C16.5 4.5 14.5 2 12 2Z" fill="white" opacity="0.9"/>
+                                            <circle cx="14.5" cy="6" r="2.5" fill="#F0A0A0"/>
+                                        </svg>
+                                    </div>
+                                    <span class="ws-app-name">InviSmile</span>
+                                    <div class="ws-badge-in">IN</div>
+                                </div>
+                                <div class="ws-rings-concentric">
                                     <svg viewBox="0 0 100 100">
-                                        <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(180,148,118,0.15)" stroke-width="8"/>
-                                        <circle cx="50" cy="50" r="38" fill="none" stroke="#D1A67A" stroke-width="8" stroke-linecap="round"
-                                            stroke-dasharray="239" stroke-dashoffset="24" transform="rotate(-90 50 50)"/>
+                                        <!-- Outer ring - Wear (Oatmeal) -->
+                                        <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(227,217,199,0.15)" stroke-width="7"/>
+                                        <circle cx="50" cy="50" r="42" fill="none" stroke="#E3D9C7" stroke-width="7" stroke-linecap="round"
+                                            stroke-dasharray="264" stroke-dashoffset="26" transform="rotate(-90 50 50)"/>
+                                        <!-- Middle ring - Streak (Caramel) -->
+                                        <circle cx="50" cy="50" r="32" fill="none" stroke="rgba(209,166,122,0.15)" stroke-width="7"/>
+                                        <circle cx="50" cy="50" r="32" fill="none" stroke="#D1A67A" stroke-width="7" stroke-linecap="round"
+                                            stroke-dasharray="201" stroke-dashoffset="50" transform="rotate(-90 50 50)"/>
+                                        <!-- Inner ring - Tray (Terracotta) -->
+                                        <circle cx="50" cy="50" r="22" fill="none" stroke="rgba(179,102,77,0.15)" stroke-width="7"/>
+                                        <circle cx="50" cy="50" r="22" fill="none" stroke="#B3664D" stroke-width="7" stroke-linecap="round"
+                                            stroke-dasharray="138" stroke-dashoffset="55" transform="rotate(-90 50 50)"/>
                                     </svg>
-                                    <div class="ws-ring-text">
+                                    <div class="ws-ring-center">
                                         <span class="ws-time">19h 53m</span>
-                                        <span class="ws-sub">worn today</span>
                                     </div>
                                 </div>
-                                <div class="ws-remove-btn">Remove</div>
-                                <div class="ws-tray">Tray 1</div>
+                                <div class="ws-bottom-row">
+                                    <span class="ws-tray">Tray 1 &middot; Day 12</span>
+                                </div>
                             </div>
                         </div>
                         <div class="watch-band-bottom"></div>
@@ -340,23 +358,33 @@
                         <div class="watch-band-top"></div>
                         <div class="watch-body">
                             <div class="watch-screen-content watch-canvas">
-                                <div class="ws-summary-title">Today's Summary</div>
-                                <div class="ws-summary-card">
-                                    <span class="ws-card-label">Worn Time</span>
-                                    <div class="ws-card-row">
-                                        <span class="ws-card-icon green">&#10003;</span>
-                                        <span class="ws-card-val">19h 53m</span>
+                                <div class="ws-top-row">
+                                    <div class="ws-app-icon">
+                                        <svg viewBox="0 0 24 24" width="16" height="16">
+                                            <path d="M12 2C9.5 2 7.5 4.5 7.5 7.5C7.5 9.5 8.5 11.2 10 12.2C8.3 13 7 14.8 7 17C7 19.8 9.2 22 12 22C14.8 22 17 19.8 17 17C17 14.8 15.7 13 14 12.2C15.5 11.2 16.5 9.5 16.5 7.5C16.5 4.5 14.5 2 12 2Z" fill="white" opacity="0.9"/>
+                                            <circle cx="14.5" cy="6" r="2.5" fill="#F0A0A0"/>
+                                        </svg>
                                     </div>
-                                    <span class="ws-card-sub">of 22h goal</span>
+                                    <span class="ws-app-name">Summary</span>
                                 </div>
-                                <div class="ws-summary-card">
-                                    <span class="ws-card-label">Removed Time</span>
-                                    <div class="ws-card-row">
-                                        <span class="ws-card-icon orange">&#8212;</span>
-                                        <span class="ws-card-val">0h</span>
+                                <div class="ws-legend">
+                                    <div class="ws-legend-row">
+                                        <span class="ws-legend-dot" style="background:#E3D9C7"></span>
+                                        <span class="ws-legend-label">Wear</span>
+                                        <span class="ws-legend-val">21h 14m</span>
                                     </div>
-                                    <span class="ws-card-sub">0 sessions</span>
+                                    <div class="ws-legend-row">
+                                        <span class="ws-legend-dot" style="background:#D1A67A"></span>
+                                        <span class="ws-legend-label">Streak</span>
+                                        <span class="ws-legend-val">14 days</span>
+                                    </div>
+                                    <div class="ws-legend-row">
+                                        <span class="ws-legend-dot" style="background:#B3664D"></span>
+                                        <span class="ws-legend-label">Tray 8</span>
+                                        <span class="ws-legend-val">Day 12</span>
+                                    </div>
                                 </div>
+                                <div class="ws-status-pill">On Track</div>
                             </div>
                         </div>
                         <div class="watch-band-bottom"></div>

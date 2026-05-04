@@ -926,38 +926,50 @@ ul {
 }
 .watch-canvas {
     background: linear-gradient(160deg, rgba(45,38,30,0.95), rgba(30,26,20,0.98));
-    color: var(--text-primary); padding: 14px 12px; gap: 5px;
+    color: var(--text-primary); padding: 14px 12px; gap: 0;
+    justify-content: space-between;
 }
 
+/* Watch top row */
+.ws-top-row {
+    display: flex; align-items: center; gap: 6px; width: 100%; margin-bottom: 2px;
+}
+.ws-app-icon {
+    width: 20px; height: 20px; border-radius: 5px; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, rgba(240,180,170,0.3), rgba(240,140,130,0.2));
+}
+.ws-app-name { font-size: 9px; font-weight: 700; color: var(--text-tertiary); flex: 1; }
 .ws-badge-in {
-    align-self: flex-start; font-size: 9px; font-weight: 700; padding: 3px 10px;
-    border-radius: 8px; background: rgba(31,209,115,0.12); color: #1FD173;
+    font-size: 8px; font-weight: 700; padding: 2px 8px;
+    border-radius: 6px; background: rgba(31,209,115,0.12); color: #1FD173;
 }
-.ws-ring { position: relative; width: 80px; height: 80px; margin: 4px 0; }
-.ws-ring svg { width: 100%; height: 100%; filter: drop-shadow(0 2px 8px rgba(209,166,122,0.2)); }
-.ws-ring-text { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.ws-time { font-size: 14px; font-weight: 800; letter-spacing: -0.5px; color: var(--oatmeal); }
-.ws-sub { font-size: 7px; color: var(--text-tertiary); }
-.ws-remove-btn {
-    padding: 6px 24px; border-radius: 20px;
-    background: linear-gradient(135deg, rgba(209,166,122,0.2), rgba(209,166,122,0.1));
-    border: 1px solid rgba(209,166,122,0.25);
-    color: var(--caramel); font-size: 11px; font-weight: 700; margin: 4px 0;
+
+/* Three concentric rings */
+.ws-rings-concentric { position: relative; width: 100px; height: 100px; margin: 0 auto; }
+.ws-rings-concentric svg { width: 100%; height: 100%; filter: drop-shadow(0 2px 10px rgba(209,166,122,0.15)); }
+.ws-ring-center {
+    position: absolute; inset: 0; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
 }
+.ws-time { font-size: 12px; font-weight: 800; letter-spacing: -0.5px; color: var(--oatmeal); }
+
+/* Watch bottom row */
+.ws-bottom-row { width: 100%; text-align: center; }
 .ws-tray { font-size: 9px; color: var(--text-tertiary); font-weight: 600; }
 
-.ws-summary-title { font-size: 13px; font-weight: 800; align-self: flex-start; margin-bottom: 8px; color: var(--oatmeal); }
-.ws-summary-card {
-    width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 12px; padding: 10px 12px; margin-bottom: 6px;
+/* Watch summary screen (2nd watch) */
+.ws-legend { width: 100%; display: flex; flex-direction: column; gap: 10px; margin: 8px 0; flex: 1; justify-content: center; }
+.ws-legend-row {
+    display: flex; align-items: center; gap: 8px; width: 100%;
+    background: rgba(255,255,255,0.04); border-radius: 10px; padding: 8px 10px;
 }
-.ws-card-label { font-size: 9px; color: var(--text-tertiary); display: block; font-weight: 500; }
-.ws-card-row { display: flex; align-items: center; gap: 6px; margin: 3px 0 1px; }
-.ws-card-icon { width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: white; }
-.ws-card-icon.green { background: #1FD173; }
-.ws-card-icon.orange { background: #F28F21; }
-.ws-card-val { font-size: 16px; font-weight: 800; color: var(--oatmeal); }
-.ws-card-sub { font-size: 8px; color: var(--text-tertiary); }
+.ws-legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.ws-legend-label { font-size: 9px; color: var(--text-tertiary); flex: 1; font-weight: 500; }
+.ws-legend-val { font-size: 11px; font-weight: 800; color: var(--oatmeal); }
+.ws-status-pill {
+    font-size: 9px; font-weight: 700; padding: 4px 14px; border-radius: 20px;
+    background: rgba(31,209,115,0.1); color: #1FD173; align-self: center;
+}
 
 /* ---- Home Widgets ---- */
 .widgets-showcase { display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; justify-content: center; }

@@ -99,7 +99,7 @@ ul { list-style: none; }
 /* Hero Screenshot */
 .hero-screenshot { position: relative; z-index: 1; margin-top: 64px; }
 .hero-img {
-    max-width: 360px; width: 100%; height: auto; border-radius: 20px;
+    max-width: 300px; width: 100%; height: auto; border-radius: 12px;
     box-shadow: 0 60px 120px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
 }
 
@@ -163,22 +163,23 @@ ul { list-style: none; }
 .screens-showcase { display: flex; flex-direction: column; gap: 120px; }
 
 .screen-row {
-    display: grid; grid-template-columns: auto 1fr; gap: 80px; align-items: center;
+    display: grid; grid-template-columns: 280px 1fr; gap: 60px; align-items: center;
+    max-width: 900px; margin: 0 auto;
 }
-.screen-row.reverse { grid-template-columns: 1fr auto; }
+.screen-row.reverse { grid-template-columns: 1fr 280px; }
 .screen-row.reverse .screen-img-wrap { order: 2; }
 .screen-row.reverse .screen-text { order: 1; }
 
 .screen-img-wrap { position: relative; }
 .screen-img {
-    width: 320px; height: auto; border-radius: 16px;
-    box-shadow: 0 40px 80px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.05);
+    width: 100%; max-width: 280px; height: auto; border-radius: 12px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.05);
     transition: transform 0.6s var(--ease-out);
 }
-.screen-img:hover { transform: scale(1.03) translateY(-8px); }
+.screen-img:hover { transform: scale(1.03) translateY(-6px); }
 
-.screen-text h3 { font-size: 32px; font-weight: 800; letter-spacing: -1px; margin-bottom: 16px; }
-.screen-text p { font-size: 17px; color: var(--text-secondary); line-height: 1.7; }
+.screen-text h3 { font-size: 28px; font-weight: 800; letter-spacing: -1px; margin-bottom: 12px; }
+.screen-text p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; }
 
 /* ============================================
    Ecosystem (Real Screenshots)
@@ -192,7 +193,7 @@ ul { list-style: none; }
 }
 .eco-img-card:hover { transform: translateY(-4px); border-color: var(--glass-border-hover); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
 .eco-img {
-    width: 100%; max-width: 340px; height: auto; border-radius: 12px; margin-bottom: 24px;
+    width: 100%; max-width: 280px; height: auto; border-radius: 12px; margin-bottom: 24px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 .eco-img-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
@@ -282,7 +283,7 @@ ul { list-style: none; }
 @media (max-width: 1024px) {
     .features-grid { grid-template-columns: repeat(2, 1fr); }
     .feature-large { grid-column: span 2; }
-    .screen-row, .screen-row.reverse { grid-template-columns: 1fr; justify-items: center; gap: 40px; }
+    .screen-row, .screen-row.reverse { grid-template-columns: 1fr; justify-items: center; gap: 40px; max-width: 100%; }
     .screen-row.reverse .screen-img-wrap { order: 0; }
     .screen-row.reverse .screen-text { order: 0; }
     .screen-text { text-align: center; }
@@ -295,13 +296,13 @@ ul { list-style: none; }
     .hero-title { letter-spacing: -2px; }
     .features-grid { grid-template-columns: 1fr; }
     .feature-large { grid-column: span 1; grid-template-columns: 1fr; padding: 32px; }
-    .screen-img { width: 280px; }
-    .hero-img { max-width: 300px; }
+    .screen-img { max-width: 240px; }
+    .hero-img { max-width: 260px; }
 }
 
 @media (max-width: 480px) {
     .hero-ctas { flex-direction: column; align-items: center; }
     .btn { width: 100%; justify-content: center; max-width: 300px; }
-    .screen-img { width: 240px; }
-    .hero-img { max-width: 260px; }
+    .screen-img { max-width: 200px; }
+    .hero-img { max-width: 220px; }
 }

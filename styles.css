@@ -1454,37 +1454,56 @@ ul {
     border-radius: var(--radius-lg);
     background: #1C1917;
     border: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 28px 24px;
+    padding: 24px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 14px;
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+    max-width: 320px;
 }
 
 .scm-reason-pill {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
+    gap: 6px;
+    padding: 6px 14px;
     border-radius: 100px;
     background: rgba(209, 166, 122, 0.15);
     color: var(--caramel);
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
+}
+
+.scm-section-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-tertiary);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
 }
 
 .scm-ring-area {
     position: relative;
-    width: 160px;
-    height: 160px;
+    width: 130px;
+    height: 130px;
     flex-shrink: 0;
 }
 
 .scm-ring-svg {
     width: 100%;
     height: 100%;
-    filter: drop-shadow(0 0 18px rgba(209, 166, 122, 0.25));
+    filter: drop-shadow(0 0 14px rgba(209, 166, 122, 0.2));
+}
+
+.scm-ring-progress {
+    animation: scmRingGrow 8s ease-in-out infinite;
+}
+
+@keyframes scmRingGrow {
+    0% { stroke-dashoffset: 280; }
+    80% { stroke-dashoffset: 180; }
+    100% { stroke-dashoffset: 280; }
 }
 
 .scm-center {
@@ -1494,23 +1513,14 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2px;
 }
 
 .scm-time {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 800;
     color: #fff;
     letter-spacing: -1px;
     font-variant-numeric: tabular-nums;
-}
-
-.scm-elapsed {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--text-tertiary);
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .scm-stats-row {
@@ -1518,7 +1528,7 @@ ul {
     width: 100%;
     background: rgba(255, 255, 255, 0.03);
     border-radius: 14px;
-    padding: 14px 0;
+    padding: 12px 0;
 }
 
 .scm-stat {
@@ -1526,7 +1536,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 3px;
 }
 
 .scm-stat-border {
@@ -1535,15 +1545,105 @@ ul {
 }
 
 .scm-stat-val {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     color: #fff;
 }
 
 .scm-stat-lbl {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 600;
     color: var(--text-tertiary);
+}
+
+/* Session List */
+.scm-sessions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.scm-sessions-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-tertiary);
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+.scm-session-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.scm-session-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: rgba(209, 166, 122, 0.1);
+    color: var(--caramel);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.scm-session-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.scm-session-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.scm-live-badge {
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(31, 209, 115, 0.15);
+    color: #58D37E;
+}
+
+.scm-session-dur {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Session slide-in animations */
+.scm-session-anim-1 {
+    animation: sessionSlideIn 8s ease-out infinite;
+}
+.scm-session-anim-2 {
+    animation: sessionSlideIn 8s ease-out infinite;
+    animation-delay: 0.8s;
+}
+.scm-session-anim-3 {
+    animation: sessionSlideIn 8s ease-out infinite;
+    animation-delay: 1.6s;
+}
+
+@keyframes sessionSlideIn {
+    0% { opacity: 0; transform: translateY(16px); }
+    5% { opacity: 1; transform: translateY(0); }
+    85% { opacity: 1; transform: translateY(0); }
+    95% { opacity: 0; transform: translateY(-8px); }
+    100% { opacity: 0; transform: translateY(16px); }
 }
 
 /* Rings Card Mockup (Build Consistency) */

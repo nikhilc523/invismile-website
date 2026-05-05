@@ -166,15 +166,53 @@ class SmoothScroll {
 // ============================================
 class RingAnimator {
     constructor() {
-        const rings = document.querySelectorAll('.ring-progress');
+        const rings = document.querySelectorAll('.bc-progress, .chr-svg circle:nth-child(even)');
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.transition = 'stroke-dashoffset 1.5s cubic-bezier(0.16, 1, 0.3, 1)';
-                    observer.unobserve(entry.target);
+                    const ring = entry.target;
+                    
+                    // Allow CSS transitions
+                    ring.style.transition = 'stroke-dashoffset 2s cubic-bezier(0.16, 1, 0.3, 1)';
+                    
+                    if (ring.classList.contains('bc-progress')) {
+                        const computedStyle = getComputedStyle(ring);
+                        const progress = parseFloat(ring.style.getPropertyValue('--progress')) || 0;
+                        const r = parseFloat(computedStyle.getPropertyValue('--r')) || ring.getAttribute('r') || 48;
+                        const circumference = 2 * Math.PI * r;
+                        
+                        // Set start state
+                        ring.style.strokeDasharray = circumference;
+                        ring.style.strokeDashoffset = circumference;
+                        
+                        // Trigger reflow to apply start state instantly without transition
+                        ring.style.transition = 'none';
+                        ring.getBoundingClientRect();
+                        
+                        // Apply target state with transition
+                        ring.style.transition = 'stroke-dashoffset 2s cubic-bezier(0.16, 1, 0.3, 1)';
+                        ring.style.strokeDashoffset = circumference * (1 - progress);
+                        
+                    } else if (ring.hasAttribute('stroke-dasharray')) {
+                        // Calendar hero rings
+                        const dashArray = parseFloat(ring.getAttribute('stroke-dasharray'));
+                        const targetOffset = parseFloat(ring.getAttribute('stroke-dashoffset'));
+                        
+                        ring.style.strokeDasharray = dashArray;
+                        ring.style.strokeDashoffset = dashArray; // Empty
+                        
+                        ring.style.transition = 'none';
+                        ring.getBoundingClientRect();
+                        
+                        ring.style.transition = 'stroke-dashoffset 2s cubic-bezier(0.16, 1, 0.3, 1)';
+                        ring.style.strokeDashoffset = targetOffset;
+                    }
+                    
+                    observer.unobserve(ring);
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.1 });
 
         rings.forEach(ring => observer.observe(ring));
     }
@@ -221,7 +259,7 @@ class CounterAnimator {
 // ============================================
 class TiltEffect {
     constructor() {
-        const cards = document.querySelectorAll('.feature-card, .eco-card, .glass-card');
+        const cards = document.querySelectorAll('.feature-card, .eco-card, .glass-card, .bento-card');
 
         cards.forEach(card => {
             card.addEventListener('mousemove', (e) => {
@@ -268,4 +306,72 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3D tilt
     new TiltEffect();
+
+    // Live Timer for Active Session
+    new LiveTimer();
 });
+
+// ============================================
+// Live Timer Simulation
+// ============================================
+class LiveTimer {
+    constructor() {
+        this.groups = new Map();
+
+        document.querySelectorAll('[data-live-counter-group]').forEach((el) => {
+            const groupName = el.dataset.liveCounterGroup;
+            if (!groupName) return;
+
+            const existing = this.groups.get(groupName);
+            if (existing) {
+                existing.elements.push(el);
+                return;
+            }
+
+            this.groups.set(groupName, {
+                elapsedSeconds: this.parseTimeToSeconds(el.textContent.trim()),
+                elements: [el]
+            });
+        });
+
+        if (!this.groups.size) return;
+
+        this.render();
+        setInterval(() => this.tick(), 1000);
+    }
+
+    parseTimeToSeconds(timeText) {
+        const [minutesText, secondsText] = timeText.split(':');
+        const minutes = Number.parseInt(minutesText, 10);
+        const seconds = Number.parseInt(secondsText, 10);
+
+        if (Number.isNaN(minutes) || Number.isNaN(seconds)) {
+            return 0;
+        }
+
+        return (minutes * 60) + seconds;
+    }
+
+    formatTime(totalSeconds) {
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+        return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    render() {
+        this.groups.forEach((group) => {
+            const formattedTime = this.formatTime(group.elapsedSeconds);
+            group.elements.forEach((el) => {
+                el.textContent = formattedTime;
+            });
+        });
+    }
+
+    tick() {
+        this.groups.forEach((group) => {
+            group.elapsedSeconds += 1;
+        });
+
+        this.render();
+    }
+}

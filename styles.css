@@ -2594,6 +2594,275 @@ ul {
 }
 
 /* ============================================
+   Tray Management
+   ============================================ */
+.tray-section {
+    padding: var(--section-pad) 0;
+}
+
+.tray-showcase {
+    display: flex;
+    justify-content: center;
+}
+
+.tray-card-mockup {
+    width: min(420px, 100%);
+    border-radius: var(--radius-xl);
+    background: #1C1917;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 60px 120px rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+.tcm-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tcm-active-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--oatmeal);
+}
+
+.tcm-active-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    flex: 1;
+}
+
+.tcm-menu {
+    font-size: 16px;
+    color: var(--text-tertiary);
+    letter-spacing: 2px;
+}
+
+/* Progress Ring */
+.tcm-ring-area {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.tcm-ring-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.tcm-ring-progress {
+    animation: tcmRingFill 6s ease-out infinite;
+}
+
+@keyframes tcmRingFill {
+    0% { stroke-dashoffset: 301; }
+    30% { stroke-dashoffset: 201; }
+    85% { stroke-dashoffset: 201; }
+    100% { stroke-dashoffset: 301; }
+}
+
+.tcm-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.tcm-tray-num {
+    font-size: 26px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+.tcm-tray-day {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-tertiary);
+}
+
+.tcm-date-range {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    margin-top: -8px;
+}
+
+/* Stats Grid */
+.tcm-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.tcm-stat-cell {
+    padding: 14px 16px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tcm-stat-full {
+    width: 100%;
+}
+
+.tcm-stat-val {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+
+.tcm-val-warn {
+    color: var(--terracotta);
+}
+
+.tcm-stat-lbl {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+}
+
+/* Daily Log */
+.tcm-daily-log {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tcm-log-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-tertiary);
+    letter-spacing: 1.2px;
+}
+
+.tcm-log-detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.tcm-log-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.tcm-dot-amber {
+    background: var(--caramel);
+}
+
+.tcm-log-day-text {
+    flex: 1;
+}
+
+.tcm-log-wear {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.tcm-day-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+}
+
+.tcm-day {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-tertiary);
+}
+
+.tcm-day-pass {
+    background: rgba(31, 209, 115, 0.15);
+    color: #58D37E;
+}
+
+.tcm-day-warn {
+    background: rgba(209, 166, 122, 0.15);
+    color: var(--caramel);
+}
+
+.tcm-day-active {
+    background: var(--oatmeal);
+    color: #1C1917;
+}
+
+/* Day grid slide-in animation */
+.tcm-day {
+    animation: tcmDaySlide 6s ease-out infinite;
+    opacity: 0;
+}
+
+.tcm-day:nth-child(1) { animation-delay: 0s; }
+.tcm-day:nth-child(2) { animation-delay: 0.08s; }
+.tcm-day:nth-child(3) { animation-delay: 0.16s; }
+.tcm-day:nth-child(4) { animation-delay: 0.24s; }
+.tcm-day:nth-child(5) { animation-delay: 0.32s; }
+.tcm-day:nth-child(6) { animation-delay: 0.40s; }
+.tcm-day:nth-child(7) { animation-delay: 0.48s; }
+.tcm-day:nth-child(8) { animation-delay: 0.56s; }
+.tcm-day:nth-child(9) { animation-delay: 0.64s; }
+.tcm-day:nth-child(10) { animation-delay: 0.72s; }
+.tcm-day:nth-child(11) { animation-delay: 0.80s; }
+.tcm-day:nth-child(12) { animation-delay: 0.88s; }
+.tcm-day:nth-child(13) { animation-delay: 0.96s; }
+.tcm-day:nth-child(14) { animation-delay: 1.04s; }
+
+@keyframes tcmDaySlide {
+    0% { opacity: 0; transform: scale(0.5); }
+    10% { opacity: 1; transform: scale(1); }
+    82% { opacity: 1; transform: scale(1); }
+    92% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 0; transform: scale(0.5); }
+}
+
+/* Stats cells staggered fade */
+.tcm-stat-cell {
+    animation: tcmStatFade 6s ease-out infinite;
+    opacity: 0;
+}
+
+.tcm-stats-grid .tcm-stat-cell:nth-child(1) { animation-delay: 0.2s; }
+.tcm-stats-grid .tcm-stat-cell:nth-child(2) { animation-delay: 0.35s; }
+.tcm-stats-grid .tcm-stat-cell:nth-child(3) { animation-delay: 0.5s; }
+.tcm-stats-grid .tcm-stat-cell:nth-child(4) { animation-delay: 0.65s; }
+.tcm-stat-full { animation-delay: 0.8s; }
+
+@keyframes tcmStatFade {
+    0% { opacity: 0; transform: translateY(10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    82% { opacity: 1; transform: translateY(0); }
+    92% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 0; transform: translateY(10px); }
+}
+
+/* ============================================
    Privacy
    ============================================ */
 .privacy {

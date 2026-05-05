@@ -2520,6 +2520,79 @@ ul {
     align-items: center;
 }
 
+/* ---- Live Activity Animations (Apple-style) ---- */
+
+/* Dynamic Island: expand from pill */
+.la-showcase .dynamic-island {
+    animation: diExpand 7s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+}
+
+@keyframes diExpand {
+    0% { transform: scaleX(0.6) scaleY(0.8); opacity: 0; }
+    8% { transform: scaleX(1) scaleY(1); opacity: 1; }
+    88% { transform: scaleX(1) scaleY(1); opacity: 1; }
+    96% { transform: scaleX(0.6) scaleY(0.8); opacity: 0; }
+    100% { transform: scaleX(0.6) scaleY(0.8); opacity: 0; }
+}
+
+/* Live Activity Card: slide up with spring */
+.la-showcase .live-activity-card {
+    animation: laSlideUp 7s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+    animation-delay: 0.4s;
+}
+
+@keyframes laSlideUp {
+    0% { transform: translateY(40px) scale(0.95); opacity: 0; }
+    10% { transform: translateY(0) scale(1); opacity: 1; }
+    85% { transform: translateY(0) scale(1); opacity: 1; }
+    95% { transform: translateY(40px) scale(0.95); opacity: 0; }
+    100% { transform: translateY(40px) scale(0.95); opacity: 0; }
+}
+
+/* Pulsing glow dot */
+.la-showcase .live-activity-card__dot {
+    animation: dotPulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes dotPulseGlow {
+    0%, 100% { box-shadow: 0 0 8px rgba(219, 174, 116, 0.4); transform: scale(1); }
+    50% { box-shadow: 0 0 20px rgba(219, 174, 116, 0.9); transform: scale(1.2); }
+}
+
+/* LIVE badge pulse */
+.la-showcase .live-activity-card__badge {
+    animation: liveBadgePulse 3s ease-in-out infinite;
+}
+
+@keyframes liveBadgePulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Timer pill subtle breathe */
+.la-showcase .live-activity-card__timer-pill {
+    animation: pillBreathe 4s ease-in-out infinite;
+}
+
+@keyframes pillBreathe {
+    0%, 100% { box-shadow: inset 0 1px 0 rgba(255,255,255,0.03), 0 10px 22px rgba(17,12,8,0.2); }
+    50% { box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 14px 30px rgba(17,12,8,0.3), 0 0 40px rgba(209,166,122,0.06); }
+}
+
+/* Close button subtle rotate */
+.la-showcase .live-activity-card__close {
+    animation: closeRotate 7s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+
+@keyframes closeRotate {
+    0% { transform: rotate(-90deg) scale(0); }
+    12% { transform: rotate(0deg) scale(1); }
+    85% { transform: rotate(0deg) scale(1); }
+    95% { transform: rotate(90deg) scale(0); }
+    100% { transform: rotate(90deg) scale(0); }
+}
+
 /* ============================================
    Privacy
    ============================================ */

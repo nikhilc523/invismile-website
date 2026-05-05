@@ -1415,21 +1415,17 @@ ul {
 .experience-showcase {
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 140px;
 }
 
 .showcase-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 48px;
 }
 
 .showcase-item.reverse {
-    direction: rtl;
-}
-
-.showcase-item.reverse > * {
     direction: ltr;
 }
 
@@ -1451,49 +1447,49 @@ ul {
 
 /* Session Card Mockup (Effortless Tracking) */
 .session-card-mockup {
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     background: #1C1917;
     border: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 24px 20px;
+    padding: 40px 36px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
-    max-width: 320px;
+    gap: 20px;
+    box-shadow: 0 60px 120px rgba(0, 0, 0, 0.5);
+    width: min(480px, 100%);
 }
 
 .scm-reason-pill {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
+    gap: 8px;
+    padding: 8px 18px;
     border-radius: 100px;
     background: rgba(209, 166, 122, 0.15);
     color: var(--caramel);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
 }
 
 .scm-section-label {
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 700;
     color: var(--text-tertiary);
-    letter-spacing: 1.2px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
 }
 
 .scm-ring-area {
     position: relative;
-    width: 130px;
-    height: 130px;
+    width: 200px;
+    height: 200px;
     flex-shrink: 0;
 }
 
 .scm-ring-svg {
     width: 100%;
     height: 100%;
-    filter: drop-shadow(0 0 14px rgba(209, 166, 122, 0.2));
+    filter: drop-shadow(0 0 24px rgba(209, 166, 122, 0.25));
 }
 
 .scm-ring-progress {
@@ -1516,10 +1512,10 @@ ul {
 }
 
 .scm-time {
-    font-size: 28px;
+    font-size: 40px;
     font-weight: 800;
     color: #fff;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
     font-variant-numeric: tabular-nums;
 }
 
@@ -1527,8 +1523,8 @@ ul {
     display: flex;
     width: 100%;
     background: rgba(255, 255, 255, 0.03);
-    border-radius: 14px;
-    padding: 12px 0;
+    border-radius: 16px;
+    padding: 16px 0;
 }
 
 .scm-stat {
@@ -1536,7 +1532,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3px;
+    gap: 4px;
 }
 
 .scm-stat-border {
@@ -1545,13 +1541,13 @@ ul {
 }
 
 .scm-stat-val {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 700;
     color: #fff;
 }
 
 .scm-stat-lbl {
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 600;
     color: var(--text-tertiary);
 }
@@ -1561,31 +1557,31 @@ ul {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 .scm-sessions-label {
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 700;
     color: var(--text-tertiary);
-    letter-spacing: 1px;
-    margin-bottom: 2px;
+    letter-spacing: 1.2px;
+    margin-bottom: 4px;
 }
 
 .scm-session-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 12px;
-    border-radius: 12px;
+    gap: 14px;
+    padding: 14px 16px;
+    border-radius: 16px;
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .scm-session-icon {
-    width: 28px;
-    height: 28px;
-    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
     background: rgba(209, 166, 122, 0.1);
     color: var(--caramel);
     display: flex;
@@ -1600,26 +1596,26 @@ ul {
 }
 
 .scm-session-name {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--text-primary);
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
 }
 
 .scm-live-badge {
-    font-size: 8px;
+    font-size: 9px;
     font-weight: 800;
     letter-spacing: 0.1em;
-    padding: 2px 6px;
-    border-radius: 4px;
+    padding: 3px 8px;
+    border-radius: 5px;
     background: rgba(31, 209, 115, 0.15);
     color: #58D37E;
 }
 
 .scm-session-dur {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--text-secondary);
     font-variant-numeric: tabular-nums;
@@ -1648,14 +1644,15 @@ ul {
 
 /* Rings Card Mockup (Build Consistency) */
 .rings-card-mockup {
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     background: #1C1917;
     border: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 28px 24px;
+    padding: 40px 36px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+    gap: 28px;
+    box-shadow: 0 60px 120px rgba(0, 0, 0, 0.5);
+    width: min(480px, 100%);
 }
 
 .rcm-header {
@@ -1665,32 +1662,32 @@ ul {
 }
 
 .rcm-title {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
     color: #fff;
 }
 
 .rcm-streak-pill {
-    padding: 5px 12px;
+    padding: 6px 14px;
     border-radius: 100px;
     background: rgba(209, 166, 122, 0.12);
     color: var(--caramel);
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
 }
 
 .rcm-ring-area {
     position: relative;
-    width: 160px;
-    height: 160px;
-    margin: 0 auto;
+    width: 220px;
+    height: 220px;
+    margin: 8px auto;
     flex-shrink: 0;
 }
 
 .rcm-ring-svg {
     width: 100%;
     height: 100%;
-    filter: drop-shadow(0 0 20px rgba(227, 217, 199, 0.12));
+    filter: drop-shadow(0 0 28px rgba(227, 217, 199, 0.15));
 }
 
 .rcm-center {
@@ -1699,7 +1696,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 800;
     color: var(--oatmeal);
     letter-spacing: -0.5px;
@@ -1715,39 +1712,77 @@ ul {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 10px;
-    padding: 10px 14px;
-    border-radius: 12px;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: 14px;
     background: rgba(255, 255, 255, 0.03);
 }
 
 .rcm-dot {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
 }
 
 .rcm-stat-label {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--text-tertiary);
 }
 
 .rcm-stat-value {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--text-primary);
 }
 
+/* Ring fill animations */
+.rcm-ring-wear {
+    animation: rcmFillWear 6s ease-out infinite;
+}
+.rcm-ring-streak {
+    animation: rcmFillStreak 6s ease-out infinite;
+    animation-delay: 0.3s;
+}
+.rcm-ring-life {
+    animation: rcmFillLife 6s ease-out infinite;
+    animation-delay: 0.6s;
+}
+
+@keyframes rcmFillWear {
+    0% { stroke-dashoffset: 301; }
+    30% { stroke-dashoffset: 36; }
+    85% { stroke-dashoffset: 36; }
+    100% { stroke-dashoffset: 301; }
+}
+@keyframes rcmFillStreak {
+    0% { stroke-dashoffset: 226; }
+    30% { stroke-dashoffset: 68; }
+    85% { stroke-dashoffset: 68; }
+    100% { stroke-dashoffset: 226; }
+}
+@keyframes rcmFillLife {
+    0% { stroke-dashoffset: 151; }
+    30% { stroke-dashoffset: 53; }
+    85% { stroke-dashoffset: 53; }
+    100% { stroke-dashoffset: 151; }
+}
+
+.showcase-text {
+    text-align: center;
+    max-width: 560px;
+    order: -1;
+}
+
 .showcase-text h3 {
-    font-size: 28px;
+    font-size: clamp(32px, 4vw, 44px);
     font-weight: 800;
-    letter-spacing: -1px;
-    margin-bottom: 12px;
+    letter-spacing: -1.5px;
+    margin-bottom: 14px;
 }
 
 .showcase-text p {
-    font-size: 16px;
+    font-size: 17px;
     color: var(--text-secondary);
     line-height: 1.7;
 }

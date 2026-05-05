@@ -529,22 +529,37 @@
             <div class="experience-showcase">
                 <div class="showcase-item" data-animate="fade-up">
                     <div class="showcase-visual">
-                        <div class="glass-card">
-                            <div class="glass-inner">
-                                <div class="timer-demo">
-                                    <div class="timer-ring-outer">
-                                        <svg viewBox="0 0 120 120">
-                                            <circle cx="60" cy="60" r="52" class="timer-track"/>
-                                            <circle cx="60" cy="60" r="52" class="timer-progress"/>
-                                        </svg>
-                                        <div class="timer-time">02:34</div>
-                                    </div>
-                                    <div class="timer-label">Aligners Out - Eating</div>
-                                    <div class="timer-pills">
-                                        <span class="timer-pill active">Eating</span>
-                                        <span class="timer-pill">Brushing</span>
-                                        <span class="timer-pill">Cleaning</span>
-                                    </div>
+                        <div class="session-card-mockup">
+                            <div class="scm-reason-pill">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+                                    <path d="M7 2v20"></path>
+                                    <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+                                </svg>
+                                <span>Eating &amp; Drinking</span>
+                            </div>
+                            <div class="scm-ring-area">
+                                <svg viewBox="0 0 120 120" class="scm-ring-svg">
+                                    <circle cx="60" cy="60" r="48" fill="none" stroke="rgba(209,166,122,0.15)" stroke-width="12"/>
+                                    <circle cx="60" cy="60" r="48" fill="none" stroke="var(--caramel)" stroke-width="12" stroke-linecap="round" stroke-dasharray="301" stroke-dashoffset="210" transform="rotate(-90 60 60)"/>
+                                </svg>
+                                <div class="scm-center">
+                                    <div class="scm-time">26:57</div>
+                                    <div class="scm-elapsed">elapsed</div>
+                                </div>
+                            </div>
+                            <div class="scm-stats-row">
+                                <div class="scm-stat">
+                                    <span class="scm-stat-val">19m</span>
+                                    <span class="scm-stat-lbl">Today</span>
+                                </div>
+                                <div class="scm-stat scm-stat-border">
+                                    <span class="scm-stat-val">3</span>
+                                    <span class="scm-stat-lbl">Sessions</span>
+                                </div>
+                                <div class="scm-stat">
+                                    <span class="scm-stat-val">1h 6m</span>
+                                    <span class="scm-stat-lbl">Remaining</span>
                                 </div>
                             </div>
                         </div>
@@ -557,23 +572,37 @@
 
                 <div class="showcase-item reverse" data-animate="fade-up">
                     <div class="showcase-visual">
-                        <div class="glass-card">
-                            <div class="glass-inner">
-                                <div class="streak-demo">
-                                    <div class="streak-number">14</div>
-                                    <div class="streak-label">Day Streak</div>
-                                    <div class="streak-dots">
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                        <span class="dot filled"></span>
-                                    </div>
-                                    <div class="streak-bar">
-                                        <div class="streak-fill"></div>
-                                    </div>
+                        <div class="rings-card-mockup">
+                            <div class="rcm-header">
+                                <span class="rcm-title">Today</span>
+                                <span class="rcm-streak-pill">14-day streak</span>
+                            </div>
+                            <div class="rcm-ring-area">
+                                <svg viewBox="0 0 120 120" class="rcm-ring-svg">
+                                    <circle cx="60" cy="60" r="48" fill="none" stroke="rgba(227,217,199,0.12)" stroke-width="10"/>
+                                    <circle cx="60" cy="60" r="48" fill="none" stroke="var(--oatmeal)" stroke-width="10" stroke-linecap="round" stroke-dasharray="301" stroke-dashoffset="36" transform="rotate(-90 60 60)"/>
+                                    <circle cx="60" cy="60" r="36" fill="none" stroke="rgba(209,166,122,0.12)" stroke-width="10"/>
+                                    <circle cx="60" cy="60" r="36" fill="none" stroke="var(--caramel)" stroke-width="10" stroke-linecap="round" stroke-dasharray="226" stroke-dashoffset="68" transform="rotate(-90 60 60)"/>
+                                    <circle cx="60" cy="60" r="24" fill="none" stroke="rgba(179,102,77,0.12)" stroke-width="10"/>
+                                    <circle cx="60" cy="60" r="24" fill="none" stroke="var(--terracotta)" stroke-width="10" stroke-linecap="round" stroke-dasharray="151" stroke-dashoffset="53" transform="rotate(-90 60 60)"/>
+                                </svg>
+                                <div class="rcm-center">20h 48m</div>
+                            </div>
+                            <div class="rcm-stats">
+                                <div class="rcm-stat-row">
+                                    <span class="rcm-dot" style="background: var(--oatmeal);"></span>
+                                    <span class="rcm-stat-label">Wear</span>
+                                    <span class="rcm-stat-value">20h 48m</span>
+                                </div>
+                                <div class="rcm-stat-row">
+                                    <span class="rcm-dot" style="background: var(--caramel);"></span>
+                                    <span class="rcm-stat-label">Streak</span>
+                                    <span class="rcm-stat-value">14 days</span>
+                                </div>
+                                <div class="rcm-stat-row">
+                                    <span class="rcm-dot" style="background: var(--terracotta);"></span>
+                                    <span class="rcm-stat-label">Tray 4</span>
+                                    <span class="rcm-stat-value">Day 12</span>
                                 </div>
                             </div>
                         </div>

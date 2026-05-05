@@ -1449,149 +1449,198 @@ ul {
     justify-content: center;
 }
 
-/* Timer Demo */
-.timer-demo {
+/* Session Card Mockup (Effortless Tracking) */
+.session-card-mockup {
+    border-radius: var(--radius-lg);
+    background: #1C1917;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 28px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
 }
 
-.timer-ring-outer {
+.scm-reason-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 100px;
+    background: rgba(209, 166, 122, 0.15);
+    color: var(--caramel);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.scm-ring-area {
     position: relative;
-    width: 120px;
-    height: 120px;
-}
-
-.timer-ring-outer svg {
-    width: 100%;
-    height: 100%;
-}
-
-.timer-track {
-    fill: none;
-    stroke: rgba(242, 143, 33, 0.15);
-    stroke-width: 6;
-}
-
-.timer-progress {
-    fill: none;
-    stroke: var(--warning);
-    stroke-width: 6;
-    stroke-linecap: round;
-    stroke-dasharray: 327;
-    stroke-dashoffset: 245;
-    transform: rotate(-90deg);
-    transform-origin: center;
-    animation: timerSpin 10s linear infinite;
-}
-
-@keyframes timerSpin {
-    to { stroke-dashoffset: 0; }
-}
-
-.timer-time {
-    position: absolute;
-    inset: 0;
+    width: 160px;
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    font-weight: 800;
-    font-variant-numeric: tabular-nums;
-    letter-spacing: -1px;
 }
 
-.timer-label {
-    font-size: 13px;
-    color: var(--text-secondary);
-    font-weight: 500;
+.scm-ring-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 18px rgba(209, 166, 122, 0.25));
 }
 
-.timer-pills {
-    display: flex;
-    gap: 8px;
-}
-
-.timer-pill {
-    padding: 6px 12px;
-    border-radius: 100px;
-    font-size: 12px;
-    font-weight: 600;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    color: var(--text-secondary);
-}
-
-.timer-pill.active {
-    background: rgba(242, 143, 33, 0.15);
-    border-color: rgba(242, 143, 33, 0.3);
-    color: var(--warning);
-}
-
-/* Streak Demo */
-.streak-demo {
+.scm-center {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 2px;
 }
 
-.streak-number {
-    font-size: 64px;
-    font-weight: 900;
-    letter-spacing: -3px;
-    background: var(--gradient-warm);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.scm-time {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -1px;
+    font-variant-numeric: tabular-nums;
 }
 
-.streak-label {
-    font-size: 16px;
-    color: var(--text-secondary);
-    font-weight: 500;
+.scm-elapsed {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.streak-dots {
+.scm-stats-row {
     display: flex;
-    gap: 8px;
-    margin-top: 8px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 14px;
+    padding: 14px 0;
 }
 
-.dot {
+.scm-stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.scm-stat-border {
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.scm-stat-val {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.scm-stat-lbl {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+}
+
+/* Rings Card Mockup (Build Consistency) */
+.rings-card-mockup {
+    border-radius: var(--radius-lg);
+    background: #1C1917;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+}
+
+.rcm-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rcm-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.rcm-streak-pill {
+    padding: 5px 12px;
+    border-radius: 100px;
+    background: rgba(209, 166, 122, 0.12);
+    color: var(--caramel);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.rcm-ring-area {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rcm-ring-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 20px rgba(227, 217, 199, 0.12));
+}
+
+.rcm-center {
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--oatmeal);
+    letter-spacing: -0.5px;
+}
+
+.rcm-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rcm-stat-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.rcm-dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: var(--bg-primary);
-    border: 2px solid var(--glass-border);
 }
 
-.dot.filled {
-    background: var(--caramel);
-    border-color: var(--caramel);
+.rcm-stat-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-tertiary);
 }
 
-.streak-bar {
-    width: 100%;
-    height: 6px;
-    border-radius: 3px;
-    background: rgba(180, 148, 118, 0.1);
-    margin-top: 8px;
-    overflow: hidden;
-}
-
-.streak-fill {
-    height: 100%;
-    width: 75%;
-    border-radius: 3px;
-    background: var(--gradient-warm);
-    animation: fillGrow 2s var(--ease-out) infinite alternate;
-}
-
-@keyframes fillGrow {
-    from { width: 60%; }
-    to { width: 80%; }
+.rcm-stat-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
 }
 
 .showcase-text h3 {

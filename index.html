@@ -332,187 +332,372 @@
                 <p class="section-desc">Designed with obsessive attention to detail, InviSmile gives you complete control over your aligner treatment in a stunning interface.</p>
             </div>
 
-            <div class="features-grid">
-                <!-- Feature 1: Activity Rings -->
-                <div class="feature-card feature-large" data-animate="fade-up">
-                    <div class="feature-visual">
-                        <div class="feature-ui-mockup rings-mockup">
-                            <div class="bc-rings-container">
-                                <svg viewBox="0 0 120 120" class="bc-rings" fill="none">
-                                    <circle cx="60" cy="60" r="48" class="bc-track bc-wear-track" fill="none"/>
-                                    <circle cx="60" cy="60" r="48" class="bc-progress bc-wear" style="--progress: 0.92;" fill="none"/>
-                                    <circle cx="60" cy="60" r="36" class="bc-track bc-streak-track" fill="none"/>
-                                    <circle cx="60" cy="60" r="36" class="bc-progress bc-streak" style="--progress: 0.78;" fill="none"/>
-                                    <circle cx="60" cy="60" r="24" class="bc-track bc-life-track" fill="none"/>
-                                    <circle cx="60" cy="60" r="24" class="bc-progress bc-life" style="--progress: 0.65;" fill="none"/>
-                                </svg>
-                            </div>
-                            <div class="bc-stats-grid">
-                                <div class="bc-stat">
-                                    <span class="bcs-val" style="color: var(--oatmeal)">21h 14m</span>
-                                    <span class="bcs-lbl">Wear</span>
-                                </div>
-                                <div class="bc-stat">
-                                    <span class="bcs-val" style="color: var(--caramel)">14 days</span>
-                                    <span class="bcs-lbl">Streak</span>
-                                </div>
-                                <div class="bc-stat">
-                                    <span class="bcs-val" style="color: var(--terracotta)">316h</span>
-                                    <span class="bcs-lbl">Life</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature-content">
+            <div class="features-showcase">
+                <article class="feature-panel feature-panel--hero" data-animate="fade-up">
+                    <div class="feature-panel__copy">
+                        <span class="feature-panel__eyebrow">Signature tracking</span>
                         <h3>Activity Rings</h3>
                         <p>Three concentric rings track your wear time, streak consistency, and overall treatment life. Inspired by Apple Fitness, designed for your smile.</p>
-                    </div>
-                </div>
 
-                <!-- Feature 2: Smart Timer -->
-                <div class="feature-card" data-animate="fade-up" data-delay="100">
-                    <div class="feature-ui-mockup timer-mockup">
-                        <div class="tm-pill">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
-                                <path d="M7 2v20"></path>
-                                <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
-                            </svg>
-                            <span>Eating & Drinking</span>
-                        </div>
-
-                        <div class="timer-ring-container">
-                            <svg viewBox="0 0 100 100" class="timer-ring">
-                                <circle cx="50" cy="50" r="46" class="tr-track"/>
-                                <circle cx="50" cy="50" r="46" class="tr-progress" style="--progress: 0.25;"/>
-                            </svg>
-                            <div class="timer-center-info">
-                                <div class="tm-time" data-live-counter-group="feature-timer">0:12</div>
-                                <div class="tm-label">current session</div>
+                        <div class="feature-value-list">
+                            <div class="feature-value-card">
+                                <span class="feature-value-card__label">Wear today</span>
+                                <span class="feature-value-card__value" style="color: var(--oatmeal);">21h 14m</span>
                             </div>
-                        </div>
-
-                        <div class="tm-stats">
-                            <div class="tm-stat">
-                                <span class="tms-val">6</span>
-                                <span class="tms-lbl">Sessions</span>
+                            <div class="feature-value-card">
+                                <span class="feature-value-card__label">Current streak</span>
+                                <span class="feature-value-card__value" style="color: var(--caramel);">14 days</span>
                             </div>
-                            <div class="tm-stat border-sides">
-                                <span class="tms-val">21m</span>
-                                <span class="tms-lbl">Total Out</span>
-                            </div>
-                            <div class="tm-stat">
-                                <span class="tms-val">37m</span>
-                                <span class="tms-lbl">Remaining</span>
+                            <div class="feature-value-card">
+                                <span class="feature-value-card__label">Treatment life</span>
+                                <span class="feature-value-card__value" style="color: var(--terracotta);">316h</span>
                             </div>
                         </div>
                     </div>
-                    <h3>Smart Timer</h3>
-                    <p>One tap to track removal sessions. Categorize by reason — eating, brushing, cleaning, or dental visits. Live Activities keep you aware.</p>
-                </div>
 
-                <!-- Feature 3: Calendar View -->
-                <div class="feature-card" data-animate="fade-up" data-delay="200">
-                    <div class="feature-ui-mockup week-mockup">
-                        <div class="week-strip">
-                            <div class="ws-day"><span class="ws-lbl">M</span><span class="ws-dot pass"></span></div>
-                            <div class="ws-day"><span class="ws-lbl">T</span><span class="ws-dot pass"></span></div>
-                            <div class="ws-day"><span class="ws-lbl">W</span><span class="ws-dot pass"></span></div>
-                            <div class="ws-day active"><span class="ws-lbl">T</span><span class="ws-dot warn"></span></div>
-                            <div class="ws-day"><span class="ws-lbl">F</span><span class="ws-dot empty"></span></div>
-                            <div class="ws-day"><span class="ws-lbl">S</span><span class="ws-dot empty"></span></div>
-                            <div class="ws-day"><span class="ws-lbl">S</span><span class="ws-dot empty"></span></div>
+                    <div class="feature-panel__visual">
+                        <div class="feature-rings-stage">
+                            <span class="feature-rings-chip feature-rings-chip--top">14 day streak</span>
+                            <span class="feature-rings-chip feature-rings-chip--left">Goal 22h</span>
+                            <span class="feature-rings-chip feature-rings-chip--right">Tray 4 &middot; Day 12</span>
+
+                            <div class="feature-ui-mockup feature-ui-mockup--hero rings-mockup">
+                                <div class="bc-rings-container feature-rings-hero__cluster">
+                                    <svg viewBox="0 0 120 120" class="bc-rings" fill="none">
+                                        <circle cx="60" cy="60" r="48" class="bc-track bc-wear-track" fill="none"/>
+                                        <circle cx="60" cy="60" r="48" class="bc-progress bc-wear" style="--progress: 0.92;" fill="none"/>
+                                        <circle cx="60" cy="60" r="36" class="bc-track bc-streak-track" fill="none"/>
+                                        <circle cx="60" cy="60" r="36" class="bc-progress bc-streak" style="--progress: 0.78;" fill="none"/>
+                                        <circle cx="60" cy="60" r="24" class="bc-track bc-life-track" fill="none"/>
+                                        <circle cx="60" cy="60" r="24" class="bc-progress bc-life" style="--progress: 0.65;" fill="none"/>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </article>
+
+                <article class="feature-panel feature-panel--calendar" data-animate="fade-up" data-delay="100">
+                    <span class="feature-panel__meta">Daily visibility</span>
                     <h3>Compliance Calendar</h3>
                     <p>Monthly view with color-coded compliance. Green for goals met, amber for close calls. Tap any day to see detailed session logs.</p>
-                </div>
 
-                <!-- Feature 4: Tray Management -->
-                <div class="feature-card" data-animate="fade-up" data-delay="100">
-                    <div class="feature-ui-mockup tray-mockup">
-                        <div class="tm-header">
-                            <span class="tm-title">Tray 8</span>
-                            <span class="tm-day">DAY <span class="amber">12</span><span class="amber-dim">/14</span></span>
-                        </div>
-                        <div class="tm-bar-container">
-                            <div class="tm-bar-fill" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    <h3>Tray Management</h3>
-                    <p>Beautiful stacked carousel of all your trays. Track progress per tray, see days remaining, and know exactly where you are in treatment.</p>
-                </div>
-
-                <!-- Feature 5: Smart Reminders -->
-                <div class="feature-card" data-animate="fade-up" data-delay="200">
-                    <div class="feature-ui-mockup notification-mockup">
-                        <div class="notif-bubble">
-                            <div class="notif-header">
-                                <div class="notif-icon"></div>
-                                <span class="notif-app">InviSmile</span>
-                                <span class="notif-time">now</span>
+                    <div class="feature-ui-mockup feature-ui-mockup--calendar">
+                        <div class="calendar-shell">
+                            <div class="calendar-shell__header">
+                                <span>This Week</span>
+                                <span>20h 48m avg</span>
                             </div>
-                            <div class="notif-body">
-                                <span class="notif-title">Aligners Out</span>
-                                <span class="notif-text">It's time to put your aligners back in.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <h3>Smart Reminders</h3>
-                    <p>Configurable notifications that nudge you to put aligners back in. Set intervals from 1 to 60 minutes with grace periods.</p>
-                </div>
 
-                <!-- Feature 6: Cloud Sync -->
-                <div class="feature-card" data-animate="fade-up" data-delay="300">
-                    <div class="feature-ui-mockup sync-mockup">
-                        <div class="sync-pill">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            <span>Synced just now</span>
-                        </div>
-                    </div>
-                    <h3>iCloud Sync</h3>
-                    <p>Your data syncs seamlessly across all your Apple devices via iCloud. Private, secure, and always up to date.</p>
-                </div>
-                <!-- Feature 7: Monthly Tracking -->
-                <div class="feature-card" data-animate="fade-up" data-delay="400">
-                    <div class="feature-ui-mockup month-mockup">
-                        <div class="month-grid">
-                            <div class="mg-day">
-                                <span class="mg-date">12</span>
-                                <div class="mg-rings">
-                                    <div class="mg-ring wear"></div>
-                                    <div class="mg-ring streak"></div>
-                                    <div class="mg-ring life"></div>
-                                    <div class="mg-dot pass"></div>
+                            <div class="week-strip">
+                                <div class="ws-day"><span class="ws-lbl">M</span><span class="ws-dot pass"></span></div>
+                                <div class="ws-day"><span class="ws-lbl">T</span><span class="ws-dot pass"></span></div>
+                                <div class="ws-day"><span class="ws-lbl">W</span><span class="ws-dot pass"></span></div>
+                                <div class="ws-day active"><span class="ws-lbl">T</span><span class="ws-dot warn"></span></div>
+                                <div class="ws-day"><span class="ws-lbl">F</span><span class="ws-dot pass"></span></div>
+                                <div class="ws-day"><span class="ws-lbl">S</span><span class="ws-dot empty"></span></div>
+                                <div class="ws-day"><span class="ws-lbl">S</span><span class="ws-dot empty"></span></div>
+                            </div>
+
+                            <div class="calendar-log-list">
+                                <div class="calendar-log">
+                                    <span class="calendar-log__dot calendar-log__dot--pass"></span>
+                                    <span class="calendar-log__day">Mon</span>
+                                    <span class="calendar-log__value">Goal met</span>
+                                </div>
+                                <div class="calendar-log">
+                                    <span class="calendar-log__dot calendar-log__dot--pass"></span>
+                                    <span class="calendar-log__day">Wed</span>
+                                    <span class="calendar-log__value">22h 07m worn</span>
+                                </div>
+                                <div class="calendar-log">
+                                    <span class="calendar-log__dot calendar-log__dot--warn"></span>
+                                    <span class="calendar-log__day">Thu</span>
+                                    <span class="calendar-log__value">1 reminder used</span>
                                 </div>
                             </div>
-                            <div class="mg-day">
-                                <span class="mg-date">13</span>
-                                <div class="mg-rings">
-                                    <div class="mg-ring wear" style="border-right-color: transparent"></div>
-                                    <div class="mg-ring streak"></div>
-                                    <div class="mg-dot warn"></div>
-                                </div>
-                            </div>
-                            <div class="mg-day today">
-                                <span class="mg-date">14</span>
-                                <div class="mg-rings">
-                                    <div class="mg-ring wear" style="border-bottom-color: transparent"></div>
-                                </div>
-                            </div>
-                            <div class="mg-day future">
-                                <span class="mg-date">15</span>
-                                <div class="mg-rings"></div>
-                            </div>
-                            <div class="mg-day future">
-                                <span class="mg-date">16</span>
-                                <div class="mg-rings"></div>
-                            </div>
                         </div>
                     </div>
+                </article>
+
+                <article class="feature-panel feature-panel--history" data-animate="fade-up" data-delay="200">
+                    <span class="feature-panel__meta">Long-view progress</span>
                     <h3>Monthly History</h3>
                     <p>View your entire treatment history at a glance. Every day displays mini activity rings and compliance status.</p>
-                </div>
+
+                    <div class="feature-ui-mockup feature-ui-mockup--history">
+                        <div class="history-board">
+                            <div class="history-board__top">
+                                <div class="history-board__summary">
+                                    <span class="history-board__eyebrow">May progress</span>
+                                    <strong class="history-board__value">87%</strong>
+                                    <span class="history-board__caption">consistency this month</span>
+                                </div>
+                                <div class="history-board__summary history-board__summary--compact">
+                                    <span class="history-board__eyebrow">Perfect days</span>
+                                    <strong class="history-board__mini">18 / 21</strong>
+                                    <span class="history-board__caption">goal hit before bedtime</span>
+                                </div>
+                            </div>
+
+                            <div class="history-week">
+                                <div class="history-week__header">
+                                    <div class="history-week__title">Today, May 5, 2026</div>
+                                    <div class="history-week__icon" aria-hidden="true">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="3" y="4" width="18" height="18" rx="3"></rect>
+                                            <path d="M8 2v4M16 2v4M3 10h18"></path>
+                                            <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="history-week__grid">
+                                    <div class="history-week__day">
+                                        <span class="history-week__label">S</span>
+                                        <div class="history-ring">
+                                            <svg viewBox="0 0 64 64" class="history-ring__svg" aria-hidden="true">
+                                                <circle cx="32" cy="32" r="26" pathLength="100" class="history-ring__track history-ring__track--wear"></circle>
+                                                <circle cx="32" cy="32" r="26" pathLength="100" class="history-ring__progress history-ring__progress--wear" style="stroke-dasharray: 82 100;"></circle>
+                                                <circle cx="32" cy="32" r="18" pathLength="100" class="history-ring__track history-ring__track--streak"></circle>
+                                                <circle cx="32" cy="32" r="18" pathLength="100" class="history-ring__progress history-ring__progress--streak" style="stroke-dasharray: 68 100;"></circle>
+                                                <circle cx="32" cy="32" r="10" pathLength="100" class="history-ring__track history-ring__track--life"></circle>
+                                                <circle cx="32" cy="32" r="10" pathLength="100" class="history-ring__progress history-ring__progress--life" style="stroke-dasharray: 58 100;"></circle>
+                                                <circle cx="32" cy="32" r="7" class="history-ring__core"></circle>
+                                                <circle cx="32" cy="32" r="3" class="history-ring__core-dot"></circle>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="history-week__day">
+                                        <span class="history-week__label">M</span>
+                                        <div class="history-ring">
+                                            <svg viewBox="0 0 64 64" class="history-ring__svg" aria-hidden="true">
+                                                <circle cx="32" cy="32" r="26" pathLength="100" class="history-ring__track history-ring__track--wear"></circle>
+                                                <circle cx="32" cy="32" r="26" pathLength="100" class="history-ring__progress history-ring__progress--wear" style="stroke-dasharray: 76 100;"></circle>
+                                                <circle cx="32" cy="32" r="18" pathLength="100" class="history-ring__track history-ring__track--streak"></circle>
+                                                <circle cx="32" cy="32" r="18" pathLength="100" class="history-ring__progress history-ring__progress--streak" style="stroke-dasharray: 64 100;"></circle>
+                                                <circle cx="32" cy="32" r="10" pathLength="100" class="history-ring__track history-ring__track--life"></circle>
+                                                <circle cx="32" cy="32" r="10" pathLength="100" class="history-ring__progress history-ring__progress--life" style="stroke-dasharray: 55 100;"></circle>
+                                                <circle cx="32" cy="32" r="7" class="history-ring__core"></circle>
+                                                <circle cx="32" cy="32" r="3" class="history-ring__core-dot"></circle>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="history-week__day history-week__day--selected">
+                                        <span class="history-week__label">T</span>
+                                        <div class="history-ring history-ring--selected">
+                                            <svg viewBox="0 0 64 64" class="history-ring__svg" aria-hidden="true">
+                                                <circle cx="32" cy="32" r="26" pathLength="100" class="history-ring__track history-ring__track--wear"></circle>
+                                                <circle cx="32" cy="32" r="26" pathLength="100" class="history-ring__progress history-ring__progress--wear" style="stroke-dasharray: 88 100;"></circle>
+                                                <circle cx="32" cy="32" r="18" pathLength="100" class="history-ring__track history-ring__track--streak"></circle>
+                                                <circle cx="32" cy="32" r="18" pathLength="100" class="history-ring__progress history-ring__progress--streak" style="stroke-dasharray: 69 100;"></circle>
+                                                <circle cx="32" cy="32" r="10" pathLength="100" class="history-ring__track history-ring__track--life"></circle>
+                                                <circle cx="32" cy="32" r="10" pathLength="100" class="history-ring__progress history-ring__progress--life" style="stroke-dasharray: 57 100;"></circle>
+                                                <circle cx="32" cy="32" r="7" class="history-ring__core"></circle>
+                                                <circle cx="32" cy="32" r="3" class="history-ring__core-dot"></circle>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="history-week__day history-week__day--muted">
+                                        <span class="history-week__label">W</span>
+                                        <div class="history-ring history-ring--muted">
+                                            <svg viewBox="0 0 64 64" class="history-ring__svg" aria-hidden="true">
+                                                <circle cx="32" cy="32" r="26" pathLength="100" class="history-ring__track history-ring__track--wear"></circle>
+                                                <circle cx="32" cy="32" r="26" pathLength="100" class="history-ring__progress history-ring__progress--wear" style="stroke-dasharray: 34 100;"></circle>
+                                                <circle cx="32" cy="32" r="18" pathLength="100" class="history-ring__track history-ring__track--streak"></circle>
+                                                <circle cx="32" cy="32" r="18" pathLength="100" class="history-ring__progress history-ring__progress--streak" style="stroke-dasharray: 28 100;"></circle>
+                                                <circle cx="32" cy="32" r="10" pathLength="100" class="history-ring__track history-ring__track--life"></circle>
+                                                <circle cx="32" cy="32" r="10" pathLength="100" class="history-ring__progress history-ring__progress--life" style="stroke-dasharray: 21 100;"></circle>
+                                                <circle cx="32" cy="32" r="7" class="history-ring__core"></circle>
+                                                <circle cx="32" cy="32" r="3" class="history-ring__core-dot"></circle>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="history-week__day history-week__day--muted">
+                                        <span class="history-week__label">T</span>
+                                        <div class="history-ring history-ring--muted">
+                                            <svg viewBox="0 0 64 64" class="history-ring__svg" aria-hidden="true">
+                                                <circle cx="32" cy="32" r="26" pathLength="100" class="history-ring__track history-ring__track--wear"></circle>
+                                                <circle cx="32" cy="32" r="26" pathLength="100" class="history-ring__progress history-ring__progress--wear" style="stroke-dasharray: 31 100;"></circle>
+                                                <circle cx="32" cy="32" r="18" pathLength="100" class="history-ring__track history-ring__track--streak"></circle>
+                                                <circle cx="32" cy="32" r="18" pathLength="100" class="history-ring__progress history-ring__progress--streak" style="stroke-dasharray: 24 100;"></circle>
+                                                <circle cx="32" cy="32" r="10" pathLength="100" class="history-ring__track history-ring__track--life"></circle>
+                                                <circle cx="32" cy="32" r="10" pathLength="100" class="history-ring__progress history-ring__progress--life" style="stroke-dasharray: 20 100;"></circle>
+                                                <circle cx="32" cy="32" r="7" class="history-ring__core"></circle>
+                                                <circle cx="32" cy="32" r="3" class="history-ring__core-dot"></circle>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="history-week__day history-week__day--muted">
+                                        <span class="history-week__label">F</span>
+                                        <div class="history-ring history-ring--muted">
+                                            <svg viewBox="0 0 64 64" class="history-ring__svg" aria-hidden="true">
+                                                <circle cx="32" cy="32" r="26" pathLength="100" class="history-ring__track history-ring__track--wear"></circle>
+                                                <circle cx="32" cy="32" r="26" pathLength="100" class="history-ring__progress history-ring__progress--wear" style="stroke-dasharray: 29 100;"></circle>
+                                                <circle cx="32" cy="32" r="18" pathLength="100" class="history-ring__track history-ring__track--streak"></circle>
+                                                <circle cx="32" cy="32" r="18" pathLength="100" class="history-ring__progress history-ring__progress--streak" style="stroke-dasharray: 22 100;"></circle>
+                                                <circle cx="32" cy="32" r="10" pathLength="100" class="history-ring__track history-ring__track--life"></circle>
+                                                <circle cx="32" cy="32" r="10" pathLength="100" class="history-ring__progress history-ring__progress--life" style="stroke-dasharray: 18 100;"></circle>
+                                                <circle cx="32" cy="32" r="7" class="history-ring__core"></circle>
+                                                <circle cx="32" cy="32" r="3" class="history-ring__core-dot"></circle>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="history-week__day history-week__day--muted">
+                                        <span class="history-week__label">S</span>
+                                        <div class="history-ring history-ring--muted">
+                                            <svg viewBox="0 0 64 64" class="history-ring__svg" aria-hidden="true">
+                                                <circle cx="32" cy="32" r="26" pathLength="100" class="history-ring__track history-ring__track--wear"></circle>
+                                                <circle cx="32" cy="32" r="26" pathLength="100" class="history-ring__progress history-ring__progress--wear" style="stroke-dasharray: 27 100;"></circle>
+                                                <circle cx="32" cy="32" r="18" pathLength="100" class="history-ring__track history-ring__track--streak"></circle>
+                                                <circle cx="32" cy="32" r="18" pathLength="100" class="history-ring__progress history-ring__progress--streak" style="stroke-dasharray: 21 100;"></circle>
+                                                <circle cx="32" cy="32" r="10" pathLength="100" class="history-ring__track history-ring__track--life"></circle>
+                                                <circle cx="32" cy="32" r="10" pathLength="100" class="history-ring__progress history-ring__progress--life" style="stroke-dasharray: 17 100;"></circle>
+                                                <circle cx="32" cy="32" r="7" class="history-ring__core"></circle>
+                                                <circle cx="32" cy="32" r="3" class="history-ring__core-dot"></circle>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="feature-panel feature-panel--reminders" data-animate="fade-up" data-delay="300">
+                    <span class="feature-panel__meta">Helpful nudges</span>
+                    <h3>Smart Reminders</h3>
+                    <p>Configurable notifications that nudge you to put aligners back in. Set intervals from 1 to 60 minutes with grace periods.</p>
+
+                    <div class="feature-ui-mockup feature-ui-mockup--reminders">
+                        <div class="reminders-stack">
+                            <div class="reminders-scene" aria-hidden="true">
+                                <div class="notif-bubble notif-bubble--queue notif-bubble--1">
+                                    <div class="notif-header">
+                                        <div class="notif-icon"></div>
+                                        <span class="notif-app">InviSmile</span>
+                                        <span class="notif-time">30m</span>
+                                    </div>
+                                    <div class="notif-body">
+                                        <span class="notif-title">Aligners still out</span>
+                                        <span class="notif-text">It's been 30 minutes. Put them back in when you're done.</span>
+                                    </div>
+                                </div>
+
+                                <div class="notif-bubble notif-bubble--queue notif-bubble--2">
+                                    <div class="notif-header">
+                                        <div class="notif-icon"></div>
+                                        <span class="notif-app">InviSmile</span>
+                                        <span class="notif-time">25m</span>
+                                    </div>
+                                    <div class="notif-body">
+                                        <span class="notif-title">Finished eating?</span>
+                                        <span class="notif-text">If you're done, pop your aligners back in and keep the streak going.</span>
+                                    </div>
+                                </div>
+
+                                <div class="notif-bubble notif-bubble--queue notif-bubble--3">
+                                    <div class="notif-header">
+                                        <div class="notif-icon"></div>
+                                        <span class="notif-app">InviSmile</span>
+                                        <span class="notif-time">cleaning</span>
+                                    </div>
+                                    <div class="notif-body">
+                                        <span class="notif-title">Done cleaning your aligner?</span>
+                                        <span class="notif-text">Put it back in now so today's wear time stays on track.</span>
+                                    </div>
+                                </div>
+
+                                <div class="notif-bubble notif-bubble--queue notif-bubble--4">
+                                    <div class="notif-header">
+                                        <div class="notif-icon"></div>
+                                        <span class="notif-app">InviSmile</span>
+                                        <span class="notif-time">2nd reminder</span>
+                                    </div>
+                                    <div class="notif-body">
+                                        <span class="notif-title">Second reminder</span>
+                                        <span class="notif-text">Your aligners are still out. Put them back in as soon as you can.</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="reminders-chip-row">
+                                <span class="reminders-chip">15 min interval</span>
+                                <span class="reminders-chip">4-step follow-up</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="feature-panel feature-panel--sync-privacy" data-animate="fade-up" data-delay="400">
+                    <span class="feature-panel__meta">Private &amp; always in sync</span>
+                    <h3>iCloud Sync &amp; Privacy</h3>
+                    <p>Your data syncs seamlessly across all Apple devices via iCloud. Stored locally first, no accounts, no tracking — private by design.</p>
+
+                    <div class="feature-ui-mockup feature-ui-mockup--sync-privacy">
+                        <div class="sync-privacy-layout" aria-hidden="true">
+                            <div class="sync-privacy-column">
+                                <div class="sync-privacy-icon sync-icon">
+                                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none">
+                                        <path d="M14 36H12A10 10 0 0 1 9.8 16.4 12 12 0 0 1 33.6 13 8 8 0 0 1 38 28H36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M24 22V38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M18 28L24 22L30 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <span class="sync-privacy-label">Synced devices</span>
+                                <div class="privacy-feature-list">
+                                    <div class="privacy-feature-item">
+                                        <span class="privacy-feature-item__dot"></span>
+                                        <span>iPhone</span>
+                                    </div>
+                                    <div class="privacy-feature-item">
+                                        <span class="privacy-feature-item__dot"></span>
+                                        <span>Apple Watch</span>
+                                    </div>
+                                    <div class="privacy-feature-item">
+                                        <span class="privacy-feature-item__dot"></span>
+                                        <span>iPad</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sync-privacy-divider"></div>
+
+                            <div class="sync-privacy-column">
+                                <div class="sync-privacy-icon privacy-icon">
+                                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none">
+                                        <rect x="10" y="22" width="28" height="22" rx="4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16 22V16C16 11.6 19.6 8 24 8C28.4 8 32 11.6 32 16V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="24" cy="33" r="2.5" fill="currentColor"/>
+                                        <line x1="24" y1="33" x2="24" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <span class="sync-privacy-label">Privacy built in</span>
+                                <div class="privacy-feature-list">
+                                    <div class="privacy-feature-item">
+                                        <span class="privacy-feature-item__dot"></span>
+                                        <span>Stored locally first</span>
+                                    </div>
+                                    <div class="privacy-feature-item">
+                                        <span class="privacy-feature-item__dot"></span>
+                                        <span>Private iCloud sync</span>
+                                    </div>
+                                    <div class="privacy-feature-item">
+                                        <span class="privacy-feature-item__dot"></span>
+                                        <span>No accounts or tracking</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -527,7 +712,8 @@
             </div>
 
             <div class="experience-showcase">
-                <div class="showcase-item" data-animate="fade-up">
+                <!-- Left column: Effortless Tracking (tall, spans both rows) -->
+                <div class="showcase-item showcase-item--tall" data-animate="fade-up">
                     <div class="showcase-visual">
                         <div class="session-card-mockup">
                             <!-- Reason Pill -->
@@ -604,7 +790,8 @@
                     </div>
                 </div>
 
-                <div class="showcase-item reverse" data-animate="fade-up">
+                <!-- Right column top: Build Consistency (horizontal) -->
+                <div class="showcase-item showcase-item--horiz" data-animate="fade-up">
                     <div class="showcase-visual">
                         <div class="rings-card-mockup">
                             <div class="rcm-header">
@@ -644,6 +831,82 @@
                     <div class="showcase-text">
                         <h3>Build Consistency</h3>
                         <p>Watch your streak grow day by day. The visual feedback of filling rings and extending streaks creates a satisfying loop that keeps you motivated throughout your entire treatment.</p>
+                    </div>
+                </div>
+
+                <!-- Right column bottom: Tray Management (horizontal) -->
+                <div class="showcase-item showcase-item--horiz showcase-item--tray" data-animate="fade-up">
+                    <div class="showcase-visual">
+                        <div class="tray-stack">
+                            <div class="tray-stack__card tray-stack__card--back2"></div>
+                            <div class="tray-stack__card tray-stack__card--back1"></div>
+                            <div class="tray-card-mockup tcm-horizontal">
+                                <div class="tcm-header">
+                                    <div class="tcm-active-dot"></div>
+                                    <span class="tcm-active-label">Active Tray</span>
+                                    <span class="tcm-menu">&#8226;&#8226;&#8226;</span>
+                                </div>
+                                <div class="tcm-body">
+                                    <div class="tcm-left">
+                                        <div class="tcm-ring-area">
+                                            <svg viewBox="0 0 120 120" class="tcm-ring-svg">
+                                                <circle cx="60" cy="60" r="48" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="10"/>
+                                                <circle cx="60" cy="60" r="48" fill="none" stroke="#E3D9C6" stroke-width="10" stroke-linecap="round" stroke-dasharray="301" stroke-dashoffset="201" transform="rotate(-90 60 60)" class="tcm-ring-progress"/>
+                                            </svg>
+                                            <div class="tcm-center">
+                                                <div class="tcm-tray-num">Tray 4</div>
+                                                <div class="tcm-tray-day">Day 3 of 15</div>
+                                            </div>
+                                        </div>
+                                        <div class="tcm-date-range">May 2 &rarr; May 17</div>
+                                    </div>
+                                    <div class="tcm-right">
+                                        <div class="tcm-stats-grid">
+                                            <div class="tcm-stat-cell">
+                                                <span class="tcm-stat-val tcm-val-warn">33%</span>
+                                                <span class="tcm-stat-lbl">Compliance</span>
+                                            </div>
+                                            <div class="tcm-stat-cell">
+                                                <span class="tcm-stat-val">1/3</span>
+                                                <span class="tcm-stat-lbl">Days Passed</span>
+                                            </div>
+                                            <div class="tcm-stat-cell">
+                                                <span class="tcm-stat-val">13d</span>
+                                                <span class="tcm-stat-lbl">Remaining</span>
+                                            </div>
+                                            <div class="tcm-stat-cell">
+                                                <span class="tcm-stat-val">17h 40m</span>
+                                                <span class="tcm-stat-lbl">Avg Wear</span>
+                                            </div>
+                                        </div>
+                                        <div class="tcm-stat-cell tcm-stat-full">
+                                            <span class="tcm-stat-val tcm-val-warn">22h 58m</span>
+                                            <span class="tcm-stat-lbl">Life Debt</span>
+                                        </div>
+                                        <div class="tcm-day-grid">
+                                            <span class="tcm-day tcm-day-pass">1</span>
+                                            <span class="tcm-day tcm-day-pass">2</span>
+                                            <span class="tcm-day tcm-day-warn">3</span>
+                                            <span class="tcm-day tcm-day-active">4</span>
+                                            <span class="tcm-day">5</span>
+                                            <span class="tcm-day">6</span>
+                                            <span class="tcm-day">7</span>
+                                            <span class="tcm-day">8</span>
+                                            <span class="tcm-day">9</span>
+                                            <span class="tcm-day">10</span>
+                                            <span class="tcm-day">11</span>
+                                            <span class="tcm-day">12</span>
+                                            <span class="tcm-day">13</span>
+                                            <span class="tcm-day">14</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-text">
+                        <h3>Tray Management</h3>
+                        <p>Monitor each aligner tray with detailed compliance stats, daily logs, and progress rings that keep you on schedule.</p>
                     </div>
                 </div>
             </div>
@@ -897,109 +1160,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tray Management Section -->
-    <section class="tray-section">
-        <div class="container">
-            <div class="section-header" data-animate="fade-up">
-                <span class="section-tag">Tray Management</span>
-                <h2 class="section-title">Every tray,<br>tracked precisely.</h2>
-                <p class="section-desc">Monitor each aligner tray with detailed compliance stats, daily logs, and progress rings that keep you on schedule.</p>
-            </div>
-            <div class="tray-showcase" data-animate="fade-up">
-                <div class="tray-stack">
-                    <!-- Back cards (peeking behind) -->
-                    <div class="tray-stack__card tray-stack__card--back2"></div>
-                    <div class="tray-stack__card tray-stack__card--back1"></div>
-                    <!-- Front card (main) -->
-                <div class="tray-card-mockup">
-                    <!-- Header -->
-                    <div class="tcm-header">
-                        <div class="tcm-active-dot"></div>
-                        <span class="tcm-active-label">Active Tray</span>
-                        <span class="tcm-menu">&#8226;&#8226;&#8226;</span>
-                    </div>
-                    <!-- Progress Ring -->
-                    <div class="tcm-ring-area">
-                        <svg viewBox="0 0 120 120" class="tcm-ring-svg">
-                            <circle cx="60" cy="60" r="48" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="10"/>
-                            <circle cx="60" cy="60" r="48" fill="none" stroke="#E3D9C6" stroke-width="10" stroke-linecap="round" stroke-dasharray="301" stroke-dashoffset="201" transform="rotate(-90 60 60)" class="tcm-ring-progress"/>
-                        </svg>
-                        <div class="tcm-center">
-                            <div class="tcm-tray-num">Tray 4</div>
-                            <div class="tcm-tray-day">Day 3 of 15</div>
-                        </div>
-                    </div>
-                    <div class="tcm-date-range">May 2 &rarr; May 17</div>
-                    <!-- Stats Grid -->
-                    <div class="tcm-stats-grid">
-                        <div class="tcm-stat-cell">
-                            <span class="tcm-stat-val tcm-val-warn">33%</span>
-                            <span class="tcm-stat-lbl">Compliance</span>
-                        </div>
-                        <div class="tcm-stat-cell">
-                            <span class="tcm-stat-val">1/3</span>
-                            <span class="tcm-stat-lbl">Days Passed</span>
-                        </div>
-                        <div class="tcm-stat-cell">
-                            <span class="tcm-stat-val">13d</span>
-                            <span class="tcm-stat-lbl">Remaining</span>
-                        </div>
-                        <div class="tcm-stat-cell">
-                            <span class="tcm-stat-val">17h 40m</span>
-                            <span class="tcm-stat-lbl">Avg Wear</span>
-                        </div>
-                    </div>
-                    <div class="tcm-stat-cell tcm-stat-full">
-                        <span class="tcm-stat-val tcm-val-warn">22h 58m</span>
-                        <span class="tcm-stat-lbl">Life Debt</span>
-                    </div>
-                    <!-- Daily Log -->
-                    <div class="tcm-daily-log">
-                        <div class="tcm-log-label">DAILY LOG</div>
-                        <div class="tcm-log-detail">
-                            <span class="tcm-log-dot tcm-dot-amber"></span>
-                            <span class="tcm-log-day-text">Day 3 &middot; May 4</span>
-                            <span class="tcm-log-wear">20h 57m</span>
-                        </div>
-                        <div class="tcm-day-grid">
-                            <span class="tcm-day tcm-day-pass">1</span>
-                            <span class="tcm-day tcm-day-pass">2</span>
-                            <span class="tcm-day tcm-day-warn">3</span>
-                            <span class="tcm-day tcm-day-active">4</span>
-                            <span class="tcm-day">5</span>
-                            <span class="tcm-day">6</span>
-                            <span class="tcm-day">7</span>
-                            <span class="tcm-day">8</span>
-                            <span class="tcm-day">9</span>
-                            <span class="tcm-day">10</span>
-                            <span class="tcm-day">11</span>
-                            <span class="tcm-day">12</span>
-                            <span class="tcm-day">13</span>
-                            <span class="tcm-day">14</span>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Privacy Section -->
-    <section class="privacy" data-animate="fade-up">
-        <div class="container">
-            <div class="privacy-card">
-                <div class="privacy-icon">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                        <path d="M24 4L6 12V22C6 34 14 42 24 44C34 42 42 34 42 22V12L24 4Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M17 24L22 29L31 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <h2>Your data stays yours.</h2>
-                <p>InviSmile stores all data locally on your device and syncs privately via iCloud. We never collect, sell, or share your health data. No accounts required. No tracking. Just your data, on your devices.</p>
             </div>
         </div>
     </section>

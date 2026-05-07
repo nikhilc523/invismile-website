@@ -304,10 +304,11 @@ ul {
     z-index: 1;
     margin-top: 64px;
     display: grid;
-    grid-template-columns: 1fr 140px 320px 320px;
+    grid-template-columns: 1fr 140px 400px 400px;
     gap: 16px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1360px;
+    align-items: stretch;
     animation: floatBobGroup 8s ease-in-out infinite;
 }
 
@@ -707,7 +708,7 @@ ul {
     gap: 24px;
     background: #1C1917;
     overflow-y: auto;
-    max-height: 600px;
+    max-height: 750px;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -725,7 +726,7 @@ ul {
     gap: 24px;
     background: #1C1917;
     overflow-y: auto;
-    max-height: 600px;
+    max-height: 750px;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -848,6 +849,9 @@ ul {
 }
 .crb-duration.terracotta {
     color: var(--terracotta);
+}
+.crb-duration.oatmeal {
+    color: var(--oatmeal);
 }
 .stat-section {
     display: flex;
@@ -1606,23 +1610,13 @@ ul {
 .reminders-scene {
     position: relative;
     width: 100%;
-    min-height: 210px;
+    height: 110px;
     padding-top: 6px;
+    overflow: hidden;
 }
 
 .reminders-scene::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 12px;
-    width: min(88%, 290px);
-    height: 90px;
-    border-radius: 16px;
-    background: rgba(34, 29, 25, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    transform: translateX(-50%) scale(0.96);
-    pointer-events: none;
-    z-index: 0;
+    display: none;
 }
 
 .reminders-scene::after {
@@ -1646,19 +1640,41 @@ ul {
     position: absolute;
     top: 0;
     left: 50%;
+    transform: translateX(-50%) translateY(100%) scale(0.96);
     width: min(100%, 320px);
     max-width: none;
     opacity: 0;
-    transform: translateX(-50%) translateY(22px) scale(0.95);
-    will-change: transform, opacity;
-    animation: notifFront 16s var(--ease-out) infinite;
     z-index: 2;
+    animation: notifCarousel 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .notif-bubble--1 { animation-delay: 0s; }
-.notif-bubble--2 { animation-delay: 4s; }
-.notif-bubble--3 { animation-delay: 8s; }
-.notif-bubble--4 { animation-delay: 12s; }
+.notif-bubble--2 { animation-delay: 3s; }
+.notif-bubble--3 { animation-delay: 6s; }
+.notif-bubble--4 { animation-delay: 9s; }
+
+@keyframes notifCarousel {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(100%) scale(0.96);
+    }
+    5% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+    22% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+    27% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-100%) scale(0.96);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-100%) scale(0.96);
+    }
+}
 
 
 .notif-bubble--2,
@@ -1716,21 +1732,32 @@ ul {
 
 .reminders-chip-row {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 6px;
 }
 
 .reminders-chip {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 9px 13px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--text-primary);
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: transparent;
+    border: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    letter-spacing: 0.03em;
+}
+
+.reminders-chip::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--caramel);
+    opacity: 0.6;
 }
 
 @keyframes slideDown {
@@ -2403,8 +2430,8 @@ ul {
 .eco-section.reverse { direction: rtl; }
 .eco-section.reverse > * { direction: ltr; }
 
-.eco-text h3 { font-size: 28px; font-weight: 800; letter-spacing: -1px; margin-bottom: 12px; }
-.eco-text p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; }
+.eco-text h3 { font-size: 36px; font-weight: 800; letter-spacing: -1px; margin-bottom: 14px; }
+.eco-text p { font-size: 19px; color: var(--text-secondary); line-height: 1.7; }
 .eco-devices { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; align-items: center; }
 
 /* ---- Apple Watch Studio ---- */
@@ -2585,18 +2612,18 @@ ul {
 }
 
 .watch-render--band-lilac {
-    --strap-light: #98A0C0;
-    --strap-dark: #727998;
+    --strap-light: #D4B896;
+    --strap-dark: #A8896A;
 }
 
 .watch-render--band-cream {
-    --strap-light: #F2E8D8;
-    --strap-dark: #D4C4B0;
+    --strap-light: #E8D5BE;
+    --strap-dark: #C4A882;
 }
 
 .watch-render--band-coral {
-    --strap-light: #EFAD8E;
-    --strap-dark: #D08968;
+    --strap-light: #C49070;
+    --strap-dark: #9B6B4F;
 }
 
 .watch-render--silver {
